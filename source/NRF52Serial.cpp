@@ -99,10 +99,10 @@ int NRF52Serial::getc()
  * @param rx the pin instance to use for reception
  *
  **/
-NRF52Serial::NRF52Serial(Pin& tx, Pin& rx, NRF_UARTE_Type* uart) : Serial(tx, rx)
+NRF52Serial::NRF52Serial(Pin& tx, Pin& rx) : Serial(tx, rx)
 {
     memset(&this->uart_instance, 0, sizeof(nrfx_uarte_t));
-    this->uart_instance.p_reg = uart;
+    this->uart_instance.p_reg = NRF_UARTE0;
 
     nrfx_uarte_config_t uart_config;
 
