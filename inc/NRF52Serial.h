@@ -33,7 +33,7 @@ namespace codal
          * @param rx the pin instance to use for reception
          *
          **/
-        NRF52Serial(Pin& tx, Pin& rx, NRF_UARTE_Type* uart);
+        NRF52Serial(Pin& tx, Pin& rx, NRF_UARTE_Type* uart = NRF_UARTE0);
 
         int enable();
         int disable();
