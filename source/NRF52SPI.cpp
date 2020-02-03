@@ -71,6 +71,7 @@ NRF52SPI::NRF52SPI(Pin &mosi, Pin &miso, Pin &sclk)
     doneHandler = NULL;
 }
 
+/*
 extern "C" void THE_HANDLER()
 {
     if (nrf_spim_event_check(THE_SPIM, NRF_SPIM_EVENT_END))
@@ -79,6 +80,7 @@ extern "C" void THE_HANDLER()
         instance->_irqDoneHandler();
     }
 }
+*/
 
 void NRF52SPI::_irqDoneHandler()
 {
